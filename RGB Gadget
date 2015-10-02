@@ -1,0 +1,11 @@
+local currentDate = os.date("*t");
+
+if currentDate.wday == 1 then fibaro:call(relay, "setColor", "255","0","0","100");
+elseif currentDate.wday == 2 then fibaro:call(relay, "setColor", "255","187","0","100");
+elseif currentDate.wday == 3 then fibaro:call(relay, "setColor", "140","0","68","100");
+elseif currentDate.wday == 4 then fibaro:call(relay, "setColor", "0","255","0","100");	
+elseif currentDate.wday == 5 then fibaro:call(relay, "setColor", "255","50","0","100");	
+elseif currentDate.wday == 6 then fibaro:call(relay, "setColor", "0","0","255","100");	
+else fibaro:call(relay, "setColor", "100","0","255","100");	
+end
+
