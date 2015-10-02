@@ -1,1 +1,23 @@
-hhgnhn gnjg
+-- Scenes1 --
+if (
+ ( tonumber(fibaro:getValue(194, "armed")) > 0 )
+then
+	fibaro:call(190, "turnOn"); -- ไฟ--
+	and   
+	fibaro:call(191, "turnOn"); -- พัดลม--
+  fibaro:killScenes(Scenes2); 
+end
+  
+ if (
+ ( tonumber(fibaro:getValue(194, "value")) == 0 
+then
+  fibaro:call(190, "turnOff"); --ไฟ--
+	fibaro:startScenes(Scenes1);
+end
+
+
+--Scenes2--
+fibaro:sleep(1200000);
+fibaro:call(191, "trunoff");  --พัดลม--
+end;
+
