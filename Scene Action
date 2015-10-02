@@ -1,0 +1,8 @@
+xx = fibaro:countScenes();
+
+fibaro:startScene(xx);
+
+fibaro:killScenes(xx);
+
+fibaro:setSceneEnabled(xx, true);
+fibaro:setSceneEnabled(xx, false);
